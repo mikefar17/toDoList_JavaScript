@@ -45,13 +45,17 @@ var toDoList = {
                 count++;
             }
         }
-        if(count === this.todos.length) {
-            for(var i = 0; i<this.todos.length; i++) {
+        if(count === this.todos.length) { // If I want to find something super specific 
+            for(var i = 0; i<this.todos.length; i++) { //test for that and do this 
                 this.todos[i].completed = false;
+            }
+        } else {
+            for(var i = 0; i<this.todos.length; i++) { // for every other instance 
+                this.todos[i].completed = true; // do this 
             }
         }
         this.displayTD();
-    }
+    }, 
   /*      for(var i = 0; i < this.todos.length; i++) { // My logic was I wanted to test if one of todos was true then turn them all true if not then turn all false
             if(this.todos[i].completed === true) {
                 for(var i = 0; i < this.todos.length; i++) {
